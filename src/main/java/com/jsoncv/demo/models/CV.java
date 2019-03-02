@@ -5,18 +5,18 @@ import lombok.*;
 
 import java.util.Vector;
 
-@Builder
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class JiriSousekCV {
+@Getter
+
+@Builder
+public class CV {
     String firstName;
     String surname;
     Address address;
     Contacts contacts;
     String profile;
-    Vector<Experience> experiences;
+    Vector<Experience> experience;
     Education education;
     Vector<Technology> technologies;
 

@@ -1,14 +1,12 @@
 package com.jsoncv.demo.models.cvfields;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Builder
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Address {
     String street;
     int orientationNumber;
