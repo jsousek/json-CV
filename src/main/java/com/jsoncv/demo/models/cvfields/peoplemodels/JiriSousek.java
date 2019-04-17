@@ -7,10 +7,15 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 
-public class JiriSousek extends CV implements Producible {
+public class JiriSousek implements Producible {
+    CV jiriSousekCV;
 
     @Override
     public CV produceCV(){
         return CV.builder().firstName("Jiří").build();
+    }
+
+    public void setJiriSousekCV(){
+        this.jiriSousekCV = produceCV();
     }
 }

@@ -7,15 +7,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CVFactory {
-    public CV createCV(String name){
+    public Object createCV(String name){
         if(name.equals("jirka")){
-            CV cv = new JiriSousek();
-            return ((JiriSousek) cv).produceCV();
+            JiriSousek jiriSousek = new JiriSousek();
+            jiriSousek.setJiriSousekCV();
+            return jiriSousek;
         }
         else if (name.equals("jirina")){
             CV jirinaKopsova = new JirinaKopsova();
+            ((JirinaKopsova) jirinaKopsova).produceCV();
 
-            return ((JirinaKopsova) jirinaKopsova).produceCV();
+            return jirinaKopsova;
         }
         return null;
     }
